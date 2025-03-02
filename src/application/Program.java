@@ -22,6 +22,10 @@ public class Program {
 
 
         list.sort((p1,p2) -> p1.getName().toUpperCase().compareTo(p2.getName().toUpperCase()));
+
+
+        list.sort((p1,p2) -> p1.getPrice().compareTo(p2.getPrice()));
+
         list.forEach(obj -> System.out.println(obj));
 
 

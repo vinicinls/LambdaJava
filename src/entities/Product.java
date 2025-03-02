@@ -41,11 +41,16 @@ public class Product{
     }
 
 
+    public static void updatePrice(Product p){
+        p.setPrice(p.getPrice() * 1.1);
+    }
+
+
     @Override
     public String toString() {
         return "Product{" +
                 "name='" + name + '\'' +
-                ", price=" + price +
+                ", price=" + String.format("%.2f",price) +
                 '}';
     }
 
