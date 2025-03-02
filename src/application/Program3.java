@@ -6,6 +6,7 @@ import util.UpperCase;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 public class Program3 {
@@ -26,7 +27,26 @@ public class Program3 {
         System.out.println("-----------------------------");
         System.out.println();
 
-        List<String> list = products.stream().map(new UpperCase()).collect(Collectors.toList());
+
+        //Método por função na classe UpperCase
+        //List<String> list = products.stream().map(new UpperCase()).collect(Collectors.toList());
+
+
+        //Método static
+        //List<String> list = products.stream().map(Product::staticUpperCase).collect(Collectors.toList());
+
+        //Método não static
+        //List<String> list = products.stream().map(Product::nonStaticUpperCase).collect(Collectors.toList());
+
+        //expressao lambda
+        //Function<Product,String> func = x -> x.getName().toUpperCase();
+        //List<String> list = products.stream().map(func).collect(Collectors.toList());
+
+        //lambda inline
+        List<String> list = products.stream().map(x -> x.getName().toUpperCase()).collect(Collectors.toList());
+
+
+
         list.forEach(System.out::println);
 
 
