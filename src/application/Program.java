@@ -20,16 +20,11 @@ public class Program {
         list.add(new Product("cadeira", 41.0));
         list.add(new Product("iphone", 6100.0));
 
-
         list.sort((p1,p2) -> p1.getName().toUpperCase().compareTo(p2.getName().toUpperCase()));
-
 
         list.sort((p1,p2) -> p1.getPrice().compareTo(p2.getPrice()));
 
         list.forEach(obj -> System.out.println(obj));
-
-
-
 
 
         //list.removeIf(Product::staticProductPredicate);
@@ -47,7 +42,6 @@ public class Program {
         System.out.println("depois");
         //list.forEach(x-> System.out.println(x));
         list.forEach(System.out::println);
-
 
         }
 

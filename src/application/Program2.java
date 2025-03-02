@@ -32,7 +32,6 @@ public class Program2 {
 
         //list.sort((p1,p2) -> p1.getPrice().compareTo(p2.getPrice()));
 
-
         list.forEach(x -> System.out.println(x));
 
 

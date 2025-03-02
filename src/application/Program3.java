@@ -1,12 +1,10 @@
 package application;
 
 import entities.Product;
-import util.UpperCase;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
-import java.util.function.Function;
 import java.util.stream.Collectors;
 
 public class Program3 {
@@ -18,8 +16,7 @@ public class Program3 {
 
         products.add(new Product("tv",90.0));
         products.add(new Product("mesa",90.0));
-        products.add(new Product("banco",90.0));
-
+        products.add(new Product("banco",200.0));
 
         products.forEach(x -> System.out.println(x));
 
@@ -27,10 +24,8 @@ public class Program3 {
         System.out.println("-----------------------------");
         System.out.println();
 
-
         //Método por função na classe UpperCase
         //List<String> list = products.stream().map(new UpperCase()).collect(Collectors.toList());
-
 
         //Método static
         //List<String> list = products.stream().map(Product::staticUpperCase).collect(Collectors.toList());
